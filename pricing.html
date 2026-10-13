@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GherkinBot - Tier Breakdown</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Pickle Logo">
+            <span>GherkinBot</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="pricing.html" class="active">Pricing</a>
+            <a href="changelog.html">Patch Notes</a>
+            <a href="docs.html">Docs</a>
+        </div>
+    </nav>
+
+    <div class="pricing-header">
+        <h1>Clearance Levels</h1>
+        <p>Analyze feature access per clearance tier.</p>
+        
+        <div style="max-width: 700px; margin: 30px auto 0 auto; background: rgba(41, 171, 224, 0.1); border: 1px solid #29abe0; border-radius: 8px; padding: 20px; text-align: center;">
+            <h3 style="color: #29abe0; margin-top: 0; font-size: 18px;"><i class="fas fa-info-circle"></i> Beta Access is Free!</h3>
+            <p style="color: #ccc; font-size: 14px; margin-bottom: 15px; line-height: 1.5;">
+                During the Beta, we are not charging for Plus or Premium tiers. All features are unlocked for everyone.
+                If you would like to support development, we are accepting tips via Ko-Fi.
+            </p>
+            <a href="https://ko-fi.com/gherkinbot" target="_blank" style="background:#29abe0; color:white; padding:8px 16px; border-radius:4px; text-decoration:none; font-weight:bold; font-size: 14px; display:inline-flex; align-items:center; gap:8px;">
+                <i class="fas fa-coffee"></i> Support on Ko-Fi
+            </a>
+        </div>
+    </div>
+
+    <div class="pricing-grid">
+
+        <div class="price-card">
+            <div class="tier-name">Level 1</div>
+            <div class="tier-price">$0 <span>/ mo</span></div>
+            <ul class="features">
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Stream Dashboard</strong> (Stats & Actions)</li>
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Chat Bot</strong> (Commands & Timers)</li>
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Manual Soundboard</strong> (Hotkeys)</li>
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Basic Protection</strong> (Links, Caps)</li>
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Omni-Bar Widget</strong></li>
+            </ul>
+            <a href="#" class="btn-card">Download Alpha</a>
+        </div>
+
+        <div class="price-card pop">
+            <div class="badge-pop">Recommended</div>
+            <div class="tier-name">Gherkin Plus</div>
+            <div class="tier-price">$5 <span>/ mo</span></div>
+            <ul class="features">
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Everything in Level 1</strong></li>
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>In-App Live Chat</strong></li>
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Channel Point Triggers</strong> (Sounds)</li>
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Visual Alerts Editor</strong></li>
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Viewer CRM</strong> (Profiles & Notes)</li>
+                <li class="active-feat"><i class="fas fa-check"></i> <strong>Auto Raid Shoutout</strong></li>
+            </ul>
+            <a href="#" class="btn-card" style="opacity: 0.5; cursor: not-allowed; background: #333; color: #888; border-color: #444;">
+                <i class="fas fa-lock"></i> Payments Disabled (Alpha)
+            </a>
+        </div>
+
+        <div class="price-card premium">
+            <div class="tier-name">Premium</div>
+            <div class="tier-price">$15 <span>/ mo</span></div>
+            <ul class="features">
+                <li class="gold-feat"><i class="fas fa-star"></i> <strong>Everything in Plus</strong></li>
+                <li class="gold-feat"><i class="fas fa-check"></i> <strong>Early Build Access</strong> (Beta Testing)</li>
+                <li class="gold-feat"><i class="fas fa-check"></i> <strong>Death Counter Widget</strong></li>
+                <li class="gold-feat"><i class="fas fa-check"></i> <strong>Full Widget Library Access</strong></li>
+                <li class="gold-feat"><i class="fas fa-check"></i> <strong>Priority Support</strong> (Discord)</li>
+                <li class="gold-feat" style="opacity:0.7; font-size:12px;"><i class="fas fa-clock"></i> <em>Coming Soon: Chat Boss & Bingo</em></li>
+            </ul>
+            <a href="#" class="btn-card" style="opacity: 0.5; cursor: not-allowed; background: #333; color: #888; border-color: #444;">
+                <i class="fas fa-lock"></i> Payments Disabled (Alpha)
+            </a>
+        </div>
+
+    </div>
+
+    <footer style="text-align:center; color:#555; font-size:12px; margin-bottom:40px;">
+        Secure payments via Stripe. Cancel anytime via the dashboard.
+    </footer>
+
+</body>
+</html>

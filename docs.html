@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GherkinBot - Field Manual</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo"> <span>GherkinBot Manual</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="changelog.html">Patch Notes</a>
+            <a href="docs.html" class="active">Docs</a>
+        </div>
+    </nav>
+
+    <div class="docs-container">
+        <div class="sidebar">
+            <h4>Setup</h4>
+            <ul>
+                <li><a href="#install">Installation</a></li>
+                <li><a href="#twitch">Twitch Auth</a></li>
+            </ul>
+            <h4>Core Modules</h4>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#stream-details">Stream Manager</a></li>
+                <li><a href="#alerts">Alerts & Logic</a></li>
+            </ul>
+            <h4>Tools</h4>
+            <ul>
+                <li><a href="#soundboard">Soundboard & Audio</a></li>
+                <li><a href="#automation">Automation</a></li>
+                <li><a href="#widgets">Widgets</a></li>
+                <li><a href="#audience">Audience & CRM</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            
+            <div id="install" class="doc-section">
+                <h1>Installation & Setup</h1>
+                <p>Getting GherkinBot running is a simple 2-step process.</p>
+                
+                <h2>1. Extraction</h2>
+                <p>Download the latest release <code>.zip</code>. Right-click the file and select <strong>Extract All</strong>.</p>
+                <div class="code-box">⚠️ IMPORTANT: Do not run GherkinBot.exe directly from the zip file. It must be extracted to a folder first to save your settings.</div>
+
+                <h2>2. Permissions</h2>
+                <p>Right-click <code>GherkinBot.exe</code> and choose <strong>Run as Administrator</strong>. This is required for Global Hotkeys (Soundboard) to work while you are focused on your game.</p>
+            </div>
+
+            <div id="twitch" class="doc-section">
+                <h1>Connecting Twitch</h1>
+                <p>To control your stream, the bot needs an Access Token.</p>
+                <ol style="color:#bbb; line-height:1.8; margin-left:20px;">
+                    <li>Launch the app.</li>
+                    <li>Click the <strong>"Login Twitch"</strong> button in the bottom right of the Dashboard.</li>
+                    <li>A browser window will open. Click <strong>Authorize</strong>.</li>
+                    <li>The app will automatically detect the token. You will see "Online" status turn green.</li>
+                </ol>
+            </div>
+
+            <div id="dashboard" class="doc-section">
+                <h1>Mission Control Dashboard</h1>
+                <p>The home screen provides high-level control of your broadcast.</p>
+                
+                <h2>Quick Actions</h2>
+                <p>Buttons to perform tasks without typing commands:</p>
+                <ul style="color:#aaa; line-height:1.8;">
+                    <li><strong>Create Poll:</strong> Opens a dialog to draft a Twitch poll instantly.</li>
+                    <li><strong>Start Raid:</strong> Type a username to send your viewers to another channel.</li>
+                    <li><strong>Clip That:</strong> Instantly generates a clip of the last 30 seconds.</li>
+                    <li><strong>Add Marker:</strong> Puts a timestamp in your VOD for later editing.</li>
+                </ul>
+
+                <h2>Protection Toggles</h2>
+                <p>Safety switches you can flip on the fly:</p>
+                <ul style="color:#aaa; line-height:1.8;">
+                    <li><strong>Block Links:</strong> Deletes any message containing a URL (VIPs/Mods exempt).</li>
+                    <li><strong>Caps Filter:</strong> Timeouts users shouting in all caps.</li>
+                    <li><strong>Emote Spam:</strong> Prevents walls of emote spam (Plus Feature).</li>
+                    <li><strong>Auto Raid SO:</strong> Automatically posts a shoutout link when someone raids you (Plus Feature).</li>
+                </ul>
+            </div>
+
+            <div id="stream-details" class="doc-section">
+                <h1>Stream Manager</h1>
+                <p>Edit your stream metadata and monitor chat in a compact view.</p>
+                <h2>Updating Info</h2>
+                <p>Type your new <strong>Title</strong>, search for a <strong>Game Category</strong> (using the auto-complete dropdown), and add <strong>Tags</strong>. Click the green Update button to push changes live.</p>
+                <h2>Ad Controls</h2>
+                <p>The <strong>"Run 60s Ad"</strong> button manually triggers a commercial break to disable pre-rolls for incoming viewers.</p>
+            </div>
+
+            <div id="alerts" class="doc-section">
+                <h1>Visual Alerts</h1>
+                <p>Configure overlays for Follows, Subs, Bits, Raids, and Hype Trains using the new <strong>Armored Carbon</strong> style.</p>
+
+                <h2>1. Connecting to OBS</h2>
+                <p>Alerts run on their own dedicated layer.</p>
+                <ol style="color:#bbb; line-height:1.8; margin-left:20px;">
+                    <li>In GherkinBot, go to the <strong>Alerts</strong> tab.</li>
+                    <li>Click the <strong>"Copy OBS File Path"</strong> button in the top right.</li>
+                    <li>In OBS, add a new <strong>Browser Source</strong> and name it "Gherkin Alerts".</li>
+                    <li><strong>Important:</strong> Leave "Local file" <strong>UNCHECKED</strong>. Paste the copied link into the <strong>URL</strong> field.</li>
+                    <li>Set Width to <strong>1920</strong> and Height to <strong>1080</strong>.</li>
+                </ol>
+                
+                <h2>2. Variations</h2>
+                <p>You can add multiple "Tiers" to an alert (e.g., a special alert for 1000+ bits). The bot will always pick the highest tier that matches the event amount.</p>
+            </div>
+
+            <div id="soundboard" class="doc-section">
+                <h1>Soundboard & Audio Engine</h1>
+                <p>GherkinBot features a multi-track audio engine supporting .MP3, .WAV, and .OGG files.</p>
+                
+                <h2>Output Routing <span class="tag new">NEW</span></h2>
+                <p>At the top of the Soundboard tab, you will find an <strong>Output Selector</strong>.</p>
+                <ul>
+                    <li><strong>Default:</strong> Plays through your Windows default device.</li>
+                    <li><strong>Specific Device:</strong> Select a virtual cable (e.g., "CABLE Input" or "GoXLR Music") to route sound effects directly into your stream mix without hearing them yourself, or vice versa.</li>
+                </ul>
+
+                <h2>Panic Button <span class="tag new">SAFETY</span></h2>
+                <p>Located in the Soundboard header, the red <strong>STOP ALL</strong> button immediately kills all currently playing audio. Use this if a sound effect gets stuck or you trigger the wrong clip.</p>
+
+                <h2>Triggers</h2>
+                <ul>
+                    <li><strong>Global Hotkeys:</strong> Click "Key: None" and press a key (F13-F24 recommended).</li>
+                    <li><strong>Channel Points:</strong> Create a Twitch Reward with the <strong>exact same name</strong> as the slot (case sensitive).</li>
+                </ul>
+            </div>
+
+            <div id="automation" class="doc-section">
+                <h1>Automation</h1>
+                <p>Manage your Chat Bot and Timed Announcements.</p>
+                
+                <h2>Announcements (Hybrid Logic)</h2>
+                <p>To prevent spamming empty chats, announcements use "Hybrid Logic." An announcement only fires if:</p>
+                <div class="code-box">Time Interval (e.g., 20 mins) AND Minimum Chat Lines (e.g., 10 lines) have BOTH passed.</div>
+            </div>
+
+            <div id="widgets" class="doc-section">
+                <h1>Widgets</h1>
+                <p>Interactive browser sources for OBS.</p>
+                
+                <h2>1. Omni-Bar</h2>
+                <p>A progress bar that fills up based on a point system.</p>
+                <ul>
+                    <li><strong>Point Logic:</strong> In settings, assign how many points a Follow, Sub, or 100 Bits is worth.</li>
+                    <li><strong>Goal:</strong> Set a target (e.g., 1000 points). The bar fills dynamically as events happen.</li>
+                </ul>
+
+                <h2 style="margin-top:20px;">2. Death Counter <span class="tag premium">PREMIUM</span></h2>
+                <p>Track your fails. Supports custom backgrounds and fonts.</p>
+                <ul>
+                    <li><strong>Triggering:</strong> Use the <code>!death</code> chat command or bind a global <strong>Keyboard Shortcut</strong> in the widget settings.</li>
+                    <li><strong>Customization:</strong> Upload your own background image or choose a preset.</li>
+                </ul>
+
+                <h2 style="margin-top:20px;">3. Chat Bubbles <span class="tag premium">PREMIUM</span></h2>
+                <p>Physics-simulated chat overlay.</p>
+                <ul>
+                    <li><strong>Text Only Mode:</strong> Check the "Text Only" box to remove the bubble background and leave just the floating text with a heavy outline.</li>
+                    <li><strong>Settings Reference:</strong>
+                        <ul style="margin-top:5px; font-size:14px; color:#aaa;">
+                            <li><strong>Lifetime:</strong> How long (seconds) bubbles stay on screen.</li>
+                            <li><strong>Max Bubbles:</strong> Limit how many can be on screen at once to prevent lag.</li>
+                            <li><strong>Layout:</strong> "Stacked" (physics pile) or "Single Line" (clean row).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="audience" class="doc-section">
+                <h1>Audience CRM</h1>
+                <p>Manage your viewer relationships.</p>
+                
+                <h2>Mod Notes</h2>
+                <p>Click on any username in the <strong>Live Chat</strong> or <strong>Subscriber List</strong> to open their profile. You can save private notes (e.g., "Big Tipper", "IRL Friend") that only you can see. These persist between streams.</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

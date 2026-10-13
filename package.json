@@ -1,0 +1,15 @@
+{
+  "name": "gherkinbot-site",
+  "version": "1.0.0",
+  "description": "GherkinBot Official Site",
+  "main": "index.html",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "stripe": "^14.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "The Panicked Pickle",
+  "license": "ISC"
+}

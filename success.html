@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GherkinBot | Activation</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        body { background: #0a0a0a; color: #fff; font-family: 'Courier New', Courier, monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .activation-box { background: #111; border: 2px solid #00ff41; padding: 40px; border-radius: 10px; text-align: center; box-shadow: 0 0 20px rgba(0, 255, 65, 0.2); max-width: 450px; width: 90%; }
+        h1 { color: #00ff41; text-transform: uppercase; letter-spacing: 2px; }
+        p { color: #aaa; margin-bottom: 30px; }
+        input { width: 100%; padding: 12px; background: #000; border: 1px solid #333; color: #00ff41; font-size: 1.1rem; text-align: center; box-sizing: border-box; margin-bottom: 20px; outline: none; }
+        input:focus { border-color: #00ff41; }
+        button { background: #00ff41; color: #000; border: none; padding: 15px 30px; font-weight: bold; cursor: pointer; text-transform: uppercase; width: 100%; transition: 0.2s; }
+        button:hover { background: #fff; box-shadow: 0 0 15px #fff; }
+        button:disabled { background: #333; color: #666; cursor: not-allowed; }
+        #status { margin-top: 20px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="activation-box" id="activation-card">
+        <h1>Welcome to the Jar</h1>
+        <p>Payment Verified. Enter your Twitch username to link your <strong>Plus</strong> license.</p>
+        
+        <input type="text" id="twitch-input" placeholder="TWITCH USERNAME" spellcheck="false">
+        
+        <button id="submit-btn" onclick="activate()">Activate Account</button>
+        
+        <div id="status"></div>
+    </div>
+
+    <script>
+        // 1. Get the Session ID from Stripe's redirect
+        const params = new URLSearchParams(window.location.search);
+        const sessionId = params.get('session_id');
+
+        // 2. If someone lands here without paying, kick them back to home
+        if (!sessionId) {
+            window.location.href = "/";
+        }
+
+        async function activate() {
+            const twitchName = document.getElementById('twitch-input').value.trim();
+            const btn = document.getElementById('submit-btn');
+            const status = document.getElementById('status');
+
+            if (!twitchName) return alert("Please enter your Twitch name!");
+
+            btn.disabled = true;
+            status.innerText = "Connecting to Brine Satellite...";
+            status.style.color = "#00ff41";
+
+            try {
+                // This calls your Netlify Function
+                const response = await fetch('/.netlify/functions/activate-license', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        sessionId: sessionId, 
+                        twitchName: twitchName 
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    status.innerHTML = "✅ SUCCESS! GherkinBot Plus Activated.<br>Please restart your desktop app.";
+                    btn.style.display = "none";
+                    document.getElementById('twitch-input').style.display = "none";
+                } else {
+                    status.innerText = "❌ ERROR: " + data.error;
+                    status.style.color = "#ff4444";
+                    btn.disabled = false;
+                }
+            } catch (err) {
+                status.innerText = "❌ Connection Failed. Check your internet.";
+                status.style.color = "#ff4444";
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

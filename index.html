@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GherkinBot - The Ultimate Stream Controller</title>
+    
+    <meta name="description" content="Manage your Twitch chat, audio effects, and audience from one beautiful dashboard. The all-in-one tool for the modern broadcaster.">
+    <meta name="keywords" content="Twitch Bot, Stream Controller, OBS Tools, Stream Deck Alternative, Soundboard, GherkinBot">
+    <meta name="author" content="ThePanickedPickle">
+
+    <meta property="og:title" content="GherkinBot - The Ultimate Stream Controller">
+    <meta property="og:description" content="Level up your stream with custom widgets, spin wheels, and automated protections. Download the Public Beta now.">
+    <meta property="og:image" content="https://www.gherkinbot.com/app-preview.png">
+    <meta property="og:url" content="https://www.gherkinbot.com">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#00ff41">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Pickle Logo">
+            <span>GherkinBot</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="features.html">Features</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="changelog.html">Patch Notes</a>
+            <a href="docs.html">Docs</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <div class="badge-beta">NOW IN PUBLIC BETA</div>
+            <h1>The Ultimate<br>Stream Controller</h1>
+            <p>Manage your Twitch chat, audio effects, and audience from one beautiful dashboard. The all-in-one tool for the modern broadcaster.</p>
+            
+            <div class="cta-group">
+                <a href="https://github.com/panickedpickle/GherkinBot-Public-Release/releases" class="btn-primary" style="flex: 1 1 100%; margin-bottom: 10px;">Download Latest Beta</a>
+                
+                <a href="#" class="btn-secondary" style="flex: 1; opacity: 0.5; cursor: not-allowed; pointer-events: none;">
+                    <i class="fas fa-lock"></i> Plus (Free in Beta)
+                </a>
+                <a href="#" class="btn-premium" style="flex: 1; opacity: 0.5; cursor: not-allowed; pointer-events: none;">
+                    <i class="fas fa-lock"></i> Premium (Free in Beta)
+                </a>
+            </div>
+
+            <div style="margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                <p style="font-size: 14px; color: #ccc; margin-bottom: 15px; line-height: 1.5;">
+                    <strong style="color: #00ff41;">BETA NOTICE:</strong> All Premium features are currently unlocked for testing!
+                    <br><span style="font-size: 13px; color: #888;">If you want to support the project check out the Ko-Fi!:</span>
+                </p>
+                <a href="https://ko-fi.com/gherkinbot" target="_blank" style="background:#29abe0; color:white; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:bold; font-size:14px; display:inline-flex; align-items:center; gap:10px; transition: transform 0.2s;">
+                    <i class="fas fa-coffee"></i> Contribute on Ko-Fi
+                </a>
+            </div>
+
+            <div class="platform-bar" style="margin-top: 30px;">
+                <span>Works with:</span>
+                <i class="fab fa-twitch" style="margin-left:10px; color:#9146ff; font-size: 20px;"></i> 
+                <span style="font-weight:bold; margin-left: 5px; color:white;">Twitch</span>
+            </div>
+        </div>
+        
+        <div class="hero-image-wrapper">
+            <div class="glow-fx"></div>
+            <img src="app-preview.png" class="app-shot" alt="Dashboard Preview">
+        </div>
+    </div>
+
+    <div class="features-section" id="features">
+        <h2 class="section-title">The Streamer's Arsenal</h2>
+        
+        <div class="feature-row">
+            <div class="feature-text">
+                <h3><i class="fas fa-sliders-h"></i> Command Center</h3>
+                <p>Your central hub. Monitor viewers, run polls, and trigger quick actions without leaving the window. Includes built-in protection against link spam and caps abuse.</p>
+                <ul style="color:#aaa; line-height:1.8;">
+                    <li>✓ Live Chat Feed</li>
+                    <li>✓ Quick Action Buttons (Raid/Clip/Poll)</li>
+                    <li>✓ Stream Health Stats</li>
+                </ul>
+            </div>
+            <div class="feature-img-box">
+                <img src="feat-dashboard.png" alt="Dashboard Tab">
+            </div>
+        </div>
+
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <h3><i class="fas fa-volume-up"></i> Integrated Soundboard</h3>
+                <p>Trigger sounds directly from your keyboard (F13-F24) or via <strong>Twitch Channel Points</strong>. Includes advanced audio routing and emergency controls.</p>
+                <ul style="color:#aaa; line-height:1.8;">
+                    <li>✓ <strong>Panic Button:</strong> Instantly stop all audio.</li>
+                    <li>✓ <strong>Output Routing:</strong> Send audio to GoXLR/Virtual Cables.</li>
+                    <li>✓ Supports .MP3, .WAV, .OGG</li>
+                </ul>
+            </div>
+            <div class="feature-img-box">
+                <img src="feat-sound.png" alt="Soundboard Tab">
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h3><i class="fas fa-puzzle-piece"></i> Widget Store</h3>
+                <p>Expand your stream with our growing library of interactive widgets. Start with the "Omni-Bar" today, or drop physics-based bubbles on your screen.</p>
+                <ul style="color:#aaa; line-height:1.8;">
+                    <li>✓ <strong>Chat Bubbles:</strong> Display chat messages on screen.</li>
+                    <li>✓ <strong>Death Counter:</strong> Track fails with custom visuals.</li>
+                    <li>✓ <strong>Omni-Bar:</strong> Gamify your sub/bit goals.</li>
+                </ul>
+            </div>
+            <div class="feature-img-box">
+                <img src="feat-widgets.png" alt="Widget Store Tab">
+            </div>
+        </div>
+    </div>
+    
+    <h2 class="section-title" id="roadmap" style="text-align:center;">Development Status</h2>
+
+    <div class="status-grid">
+        <div class="status-col live">
+            <div class="col-header">
+                <div class="status-light"></div>
+                <h3>LIVE SYSTEM (BETA)</h3>
+            </div>
+            <div class="col-body">
+                <div class="item-card">
+                    <i class="fas fa-home"></i>
+                    <div><strong>Mission Control</strong><small>Chat, Polls, Raid/Clip</small></div>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-volume-up"></i>
+                    <div><strong>Soundboard 2.0</strong><small>Routing & Panic Button</small></div>
+                </div>
+                 <div class="item-card">
+                    <i class="fas fa-comment-dots"></i>
+                    <div><strong>Physics Bubbles</strong><small>Interactive Chat Widget</small></div>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-bell"></i>
+                    <div><strong>Visual Alerts</strong><small>Armored Carbon Style</small></div>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-skull"></i>
+                    <div><strong>Death Counter</strong><small>Interactive Widget</small></div>
+                </div>
+                 <div class="item-card">
+                    <i class="fas fa-users"></i>
+                    <div><strong>Audience CRM</strong><small>Profiles & Notes</small></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-col progress">
+            <div class="scanner-line"></div>
+            <div class="col-header">
+                <div class="status-icon"><i class="fas fa-cog fa-spin"></i></div>
+                <h3>IN PROGRESS</h3>
+            </div>
+            <div class="col-body">
+                <div class="item-card active-item">
+                    <i class="fas fa-layer-group"></i>
+                    <div><strong>OBS Wrapper</strong><small>Direct Scene Control</small></div>
+                </div>
+                <div class="item-card active-item">
+                    <i class="fas fa-dragon"></i>
+                    <div><strong>Chat Boss</strong><small>RPG Boss Fights</small></div>
+                </div>
+                 <div class="item-card active-item">
+                    <i class="fab fa-discord"></i>
+                    <div><strong>Discord Bridge</strong><small>Sync Chat & Roles</small></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-col future">
+            <div class="col-header">
+                <div class="status-icon"><i class="fas fa-lock"></i></div>
+                <h3>FUTURE OPS</h3>
+            </div>
+            <div class="col-body">
+                <div class="item-card locked-item"><i class="fas fa-mobile-alt"></i> <strong>Mobile App</strong></div>
+                <div class="item-card locked-item"><i class="fas fa-user-secret"></i> <strong>Mod Web-Deck</strong></div>
+                <div class="item-card locked-item"><i class="fab fa-youtube"></i> <strong>Multi-Stream</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="issues" style="background-color: #2a2a2a; padding: 40px 20px; border-top: 1px solid #444; margin-top: 60px;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="color: #ffcc00; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-info-circle"></i> Beta Notice
+            </h2>
+            <p style="color: #ccc; margin-bottom: 20px;">
+                GherkinBot is currently in <strong>Public Beta</strong>. The software is stable for daily use, but we are still adding features and squashing bugs.
+            </p>
+
+            <div style="background: rgba(255, 204, 0, 0.1); padding: 15px; border-left: 4px solid #ffcc00; border-radius: 4px; margin-bottom: 20px;">
+                <h3 style="color: #fff; margin: 0 0 5px 0;">Windows says "Windows Protected Your PC"</h3>
+                <p style="color: #bbb; margin: 0; font-size: 0.9em;">
+                    Because this is a new beta release, Windows doesn't recognize the signature yet. Click <strong>"More Info"</strong> -> <strong>"Run Anyway"</strong> to install.
+                </p>
+            </div>
+
+            <div style="margin-top: 20px; text-align: center;">
+                <p style="color: #888;">Found a bug? <a href="https://discord.gg/G6vPT5NvaR" style="color: #00ff88;">Report it in the Discord</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" style="color:#666; text-decoration:none; margin-right:15px; font-size:12px;">About the Creator</a>
+            <a href="docs.html" style="color:#666; text-decoration:none; margin-right:15px; font-size:12px;">Documentation</a>
+            <a href="changelog.html" style="color:#666; text-decoration:none; margin-right:15px; font-size:12px;">Patch Notes</a>
+        </div>
+        <div style="color:#444; font-size:11px;">
+            Built for Streamers, by a Streamer. | GherkinBot © 2026
+        </div>
+    </footer>
+
+</body>
+</html>

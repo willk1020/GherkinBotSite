@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GherkinBot - System Logs</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+    
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo"> <span>GherkinBot Logs</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="changelog.html" class="active">Patch Notes</a>
+            <a href="docs.html">Docs</a>
+        </div>
+    </nav>
+
+    <div class="log-header">
+        <h1>Patch Notes</h1>
+        <p>System Update History</p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="update-card">
+            <div class="ver-row">
+                <div class="ver-title">v0.6 - Alerts, Auido, & Stability</div>
+                <div class="ver-date">DEC 31, 2025</div>
+            </div>
+            
+            <p style="color:#aaa; font-size:14px; margin-bottom:15px;">
+                GherkinBot just got a major upgrade. This patch focuses on stability, audio compatibility, and a complete visual overhaul for stream alerts.
+            </p>
+
+            <ul class="changes-list">
+                <li><span class="tag new">UI</span> <strong>Armored Carbon Skin:</strong> Complete redesign of the Sound Alert card with high-def carbon mesh, heavy 3D metal bevels, and holographic neon-green sheen.</li>
+                <li><span class="tag new">AUDIO</span> <strong>Audio Engine 2.0:</strong> Added full support for .WAV and .OGG files. Rewrote the asset server to handle filenames with spaces.</li>
+                
+                <li style="margin-top:15px;"><span class="tag fix">FIX</span> <strong>Alert System:</strong> Resolved critical issue where overlay alerts would trigger but fail to display images or play sounds in production builds.</li>
+                <li><span class="tag fix">FIX</span> <strong>Stream Manager:</strong> Updated Twitch API permissions to reliably update Stream Title, Game, and Tags without silent failures.</li>
+                <li><span class="tag fix">FIX</span> <strong>Auto-Updater:</strong> Patched repository connection logic. GherkinBot can now self-update reliably when new features drop.</li>
+                
+                <li style="margin-top:15px;"><span class="tag fix">SYSTEM</span> <strong>Startup Stability:</strong> Fixed "White Screen" launch issue by re-routing the resource path loader.</li>
+                <li><span class="tag fix">SYSTEM</span> <strong>Optimization:</strong> Removed legacy debug console and cleanup code for a faster, silent background startup.</li>
+            </ul>
+        </div>
+        <div class="update-card" style="opacity: 0.8;">
+            <div class="ver-row">
+                <div class="ver-title">v0.4 - WIDGETS & POLISH</div>
+                <div class="ver-date">DEC 18, 2025</div>
+            </div>
+            
+            <p style="color:#aaa; font-size:14px; margin-bottom:15px;">
+                This update introduces the first Premium Widget, major stability fixes for the CRM, and a UI overhaul preparing for the tier system.
+            </p>
+
+            <ul class="changes-list">
+                <li><span class="tag new">WIDGET</span> <strong>Death Counter:</strong> Added fully interactive counter with custom backgrounds, fonts, and hotkey support.</li>
+                <li><span class="tag new">UI</span> <strong>Tier System:</strong> Added visual "Plus" and "Premium" tags to prepare for upcoming tier restrictions.</li>
+                
+                <li style="margin-top:15px;"><span class="tag new">AUDIO</span> <strong>Soundboard:</strong> Added "Reset Slot" functionality and fixed channel point header glitches.</li>
+                <li><span class="tag fix">BOT</span> <strong>User Profiles:</strong> Fixed chat history tracking and follow date calculation.</li>
+                <li><span class="tag fix">SYSTEM</span> <strong>Overlay:</strong> Separated widgets into dedicated files (death.html) for better OBS layout control.</li>
+            </ul>
+        </div>
+
+        <div class="update-card" style="opacity: 0.6;">
+            <div class="ver-row">
+                <div class="ver-title">v0.1 - ALPHA LAUNCH</div>
+                <div class="ver-date">DEC 16, 2025</div>
+            </div>
+            
+            <p style="color:#aaa; font-size:14px; margin-bottom:15px;">
+                The initial public release of GherkinBot. This build focuses on core stream management and chat interaction.
+            </p>
+
+            <ul class="changes-list">
+                <li><span class="tag new">CORE</span> <strong>Dashboard:</strong> Added View Counter, Chat Activity, and Latest Activity feed.</li>
+                <li><span class="tag new">CORE</span> <strong>Quick Actions:</strong> Added Poll Create, Raid, Clip, and Stream Marker buttons.</li>
+                <li><span class="tag new">CORE</span> <strong>Protection:</strong> Added toggles for Block Links, Caps Filter, and Emote Spam.</li>
+                <li><span class="tag new">CORE</span> <strong>Auto-Raid:</strong> Added "Auto Raid SO" to automatically shoutout incoming raiders.</li>
+
+                <li style="margin-top:15px;"><span class="tag new">STREAM</span> <strong>Details Tab:</strong> Ability to update Title, Category, and Tags.</li>
+                <li><span class="tag new">STREAM</span> <strong>Live Chat:</strong> Integrated chat view within the details pane.</li>
+
+                <li style="margin-top:15px;"><span class="tag new">BOT</span> <strong>Announcements:</strong> Added Timed + Activity hybrid logic.</li>
+                <li><span class="tag new">BOT</span> <strong>Chat Bot:</strong> Added Custom Commands engine.</li>
+                <li><span class="tag new">BOT</span> <strong>Alerts:</strong> Added Custom Alert System for stream events.</li>
+
+                <li style="margin-top:15px;"><span class="tag new">AUDIO</span> <strong>Soundboard:</strong> Support for Hotkeys and Channel Points.</li>
+                <li><span class="tag new">UI</span> <strong>Audience:</strong> Added Subscriber List view.</li>
+                <li><span class="tag new">WIDGET</span> <strong>Omni-Bar:</strong> First widget available for browser sources.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
