@@ -1,6 +1,6 @@
 # GherkinBot - Official Website & Documentation Hub
 
-![GherkinBot Mascot](app-preview.png)[cite: 3]
+![GherkinBot Mascot](app-preview.png)
 
 This repository contains the front-end web architecture for **GherkinBot**. While the core application handles the heavy API routing in Java, this lightweight web project was built to market the product, distribute releases, and host the official technical documentation.
 
