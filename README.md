@@ -18,4 +18,4 @@ Just like the core application, this website is currently archived. It was built
 * **Typography & Icons:** FontAwesome API[cite: 5, 8]
 
 ## Related Repositories
-* **[Gherkinbot Core App](insert-link-here):** The main Java/Electron desktop application source code.
+* **[Gherkinbot Core App](https://github.com/willk1020/GherkinBot):** The main Java/Electron desktop application source code.
